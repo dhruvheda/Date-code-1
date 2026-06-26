@@ -32,7 +32,7 @@ function typeWriter(){
 
     }else{
 
-        title.innerHTML += '<span class="cursor">|</span>';
+        title.style.borderRight="3px solid #333";
 
     }
 
@@ -122,7 +122,11 @@ function moveNoButton(){
 
 }
 
-noBtn.addEventListener("mouseenter",moveNoButton);
+if(window.innerWidth > 768){
+
+    noBtn.addEventListener("mouseenter",moveNoButton);
+
+}
 
 // =====================================
 // YES BUTTON
