@@ -1,0 +1,727 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+background:#FFF8DA;
+
+color:#222;
+
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.background{
+
+position:fixed;
+
+inset:0;
+
+z-index:-5;
+
+background:
+
+radial-gradient(circle at top left,#FFE082 0%,transparent 30%),
+
+radial-gradient(circle at bottom right,#FFD54F55 0%,transparent 35%),
+
+linear-gradient(135deg,#FFF9E4,#FFEAA7);
+
+}
+
+.background::before{
+
+content:"";
+
+position:absolute;
+
+width:550px;
+
+height:550px;
+
+border-radius:50%;
+
+background:#FFD54F22;
+
+top:-180px;
+
+left:-120px;
+
+filter:blur(90px);
+
+}
+
+.background::after{
+
+content:"";
+
+position:absolute;
+
+width:450px;
+
+height:450px;
+
+border-radius:50%;
+
+background:#FFF17633;
+
+right:-120px;
+
+bottom:-120px;
+
+filter:blur(80px);
+
+}
+
+/* ===========================
+   MAIN CARD
+=========================== */
+
+.container{
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+.card{
+
+width:720px;
+
+max-width:92%;
+
+padding:60px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.62);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.45);
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.10),
+
+0 4px 20px rgba(255,193,7,.12);
+
+text-align:center;
+
+animation:cardEnter .8s ease;
+
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes cardEnter{
+
+0%{
+
+opacity:0;
+
+transform:translateY(35px) scale(.96);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+}
+
+}
+
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+
+#title{
+
+font-size:64px;
+
+font-weight:700;
+
+height:78px;
+
+letter-spacing:-1px;
+
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+font-size:21px;
+
+color:#666;
+
+margin-bottom:45px;
+
+}
+
+.question{
+
+font-size:40px;
+
+line-height:1.4;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+.small{
+
+font-size:20px;
+
+color:#666;
+
+margin-bottom:45px;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:25px;
+
+margin-top:15px;
+
+flex-wrap:wrap;
+
+}
+
+button{
+
+padding:18px 36px;
+
+border-radius:16px;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+border:none;
+
+outline:none;
+
+user-select:none;
+
+}
+
+#yesBtn{
+
+background:linear-gradient(135deg,#FFD54F,#FFC107);
+
+color:#222;
+
+box-shadow:
+
+0 8px 18px rgba(255,193,7,.30);
+
+}
+
+#yesBtn:hover{
+
+transform:translateY(-5px) scale(1.03);
+
+box-shadow:
+
+0 16px 32px rgba(255,193,7,.35);
+
+}
+
+#yesBtn:active{
+
+transform:scale(.96);
+
+}
+
+#noBtn{
+
+background:white;
+
+border:2px solid #E6E6E6;
+
+color:#444;
+
+transition:
+
+left .25s,
+
+top .25s,
+
+transform .25s,
+
+background .25s;
+
+}
+
+#noBtn:hover{
+
+background:#FFF8E0;
+
+}
+
+/* ===========================
+   FLOATING SPARKLES
+=========================== */
+
+.sparkle{
+
+position:fixed;
+
+pointer-events:none;
+
+font-size:18px;
+
+color:#FFC107;
+
+animation:floatSparkle 2.8s linear forwards;
+
+opacity:.85;
+
+z-index:-1;
+
+}
+
+@keyframes floatSparkle{
+
+0%{
+
+transform:scale(0);
+
+opacity:0;
+
+}
+
+20%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+80%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+
+translateY(-40px)
+
+rotate(180deg)
+
+scale(.3);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   DECORATIONS
+=========================== */
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+width:90px;
+
+height:90px;
+
+border-radius:50%;
+
+background:#FFD54F22;
+
+top:-25px;
+
+left:-25px;
+
+filter:blur(10px);
+
+}
+
+.card::after{
+
+content:"";
+
+position:absolute;
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+background:#FFF17622;
+
+right:-35px;
+
+bottom:-35px;
+
+filter:blur(14px);
+
+}
+
+.card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* ===========================
+   TEXT ANIMATION
+=========================== */
+
+.question{
+
+animation:fadeText 1s ease;
+
+}
+
+.small{
+
+animation:fadeText 1.4s ease;
+
+}
+
+@keyframes fadeText{
+
+from{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   NICE SELECTION
+=========================== */
+
+::selection{
+
+background:#FFD54F;
+
+color:#222;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#FFD54F;
+
+border-radius:50px;
+
+}
+
+/* ===========================
+   SUCCESS SCREEN
+=========================== */
+
+.success{
+
+display:none;
+
+animation:fadeSuccess .6s ease;
+
+margin-top:35px;
+
+}
+
+@keyframes fadeSuccess{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.success h2{
+
+font-size:34px;
+
+margin-bottom:15px;
+
+}
+
+.success p{
+
+font-size:19px;
+
+color:#555;
+
+margin-bottom:20px;
+
+line-height:1.6;
+
+}
+
+/* ===========================
+   DATE PICKER
+=========================== */
+
+input[type="date"]{
+
+margin-top:18px;
+
+padding:14px 18px;
+
+border-radius:12px;
+
+border:2px solid #FFD54F;
+
+background:white;
+
+font-size:18px;
+
+color:#333;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+input[type="date"]:focus{
+
+box-shadow:0 0 0 5px rgba(255,193,7,.15);
+
+}
+
+.confirmBtn{
+
+margin-top:25px;
+
+padding:16px 34px;
+
+background:#FBC02D;
+
+border:none;
+
+border-radius:14px;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.confirmBtn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 12px 22px rgba(255,193,7,.25);
+
+}
+
+/* ===========================
+   CURSOR
+=========================== */
+
+.cursor{
+
+display:inline-block;
+
+animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.card{
+
+padding:35px 25px;
+
+}
+
+#title{
+
+font-size:42px;
+
+height:55px;
+
+}
+
+.subtitle{
+
+font-size:17px;
+
+margin-bottom:30px;
+
+}
+
+.question{
+
+font-size:28px;
+
+}
+
+.small{
+
+font-size:16px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}
+
+/* ===========================
+   FINAL POLISH
+=========================== */
+
+button{
+
+transition:
+
+transform .3s,
+
+box-shadow .3s,
+
+background .3s;
+
+}
+
+.card{
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 25px 70px rgba(0,0,0,.12),
+
+0 12px 35px rgba(255,193,7,.15);
+
+}
+
