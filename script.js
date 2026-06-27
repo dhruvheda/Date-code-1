@@ -14,7 +14,7 @@ const success = document.getElementById("success");
 // TYPEWRITER
 // =====================================
 
-const heading = "Hey Shivangi!";
+const heading = "Hey Samantha!";
 
 title.textContent = "";
 
